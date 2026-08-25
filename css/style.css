@@ -1,0 +1,122 @@
+/* --- ESTILOS GENERALES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5; /* Un gris muy claro para contrastar con las tarjetas */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- ENCABEZADO Y PIE DE PÁGINA --- */
+header {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #888;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* --- CONTENEDOR PRINCIPAL (GRILLA) --- */
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; /* Espacio entre cada tarjeta */
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+}
+
+/* --- TARJETAS DE PRODUCTOS --- */
+.producto {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 320px; /* Ancho máximo de la tarjeta */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efecto al pasar el mouse por encima */
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.producto img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain; /* Asegura que la consola entera se vea sin recortarse */
+    background-color: #fff;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.producto h2 {
+    font-size: 1.3rem;
+    padding: 1rem 1rem 0;
+    color: #111;
+    text-align: center;
+}
+
+.producto p {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    flex-grow: 1; /* Empuja el precio y el botón hacia abajo si el texto es corto */
+    text-align: justify;
+}
+
+/* --- PRECIO Y BOTÓN --- */
+.precio {
+    font-size: 1.4rem !important;
+    font-weight: 700;
+    color: #2b8a3e; /* Verde oscuro para destacar el precio */
+    text-align: center !important;
+    padding: 0.5rem 1rem 1rem !important;
+    margin: 0;
+}
+
+.boton-whatsapp {
+    display: block;
+    background-color: #25D366;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+    font-size: 1.05rem;
+}
+
+.boton-whatsapp:hover {
+    background-color: #128C7E; /* Verde más oscuro de WhatsApp al pasar el mouse */
+}
