@@ -3,90 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Catálogo de Productos</title>
+    
+    <!-- Fuentes de Google (Poppins) para un diseño moderno -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Iconos de FontAwesome para el botón de WhatsApp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Productos</h1>
-        <p>Catálogo online - Envíame un mensaje para comprar</p>
+    <header class="hero-header">
+        <div class="header-content">
+            <h1>GameStore</h1>
+            <p>Catálogo online oficial. Envíame un mensaje para comprar.</p>
+        </div>
     </header>
 
     <main class="contenedor-productos">
 
         <!-- PRODUCTO 1 -->
-        <article class="producto">
-            <img src="images/PlayStation Portal Remote Player.jpg" alt="PlayStation Portal Remote Player">
-            <h2>PlayStation Portal Remote Player</h2>
-            <p>Es un dispositivo portátil de uso a distancia exclusivo para la PS5. No es una consola independiente; requiere transmitir los juegos mediante Wi-Fi desde una consola PS5 que tengas en casa. Cuenta con una pantalla táctil LCD Full HD de 8 pulgadas y los agarres laterales replican de forma exacta todas las funciones del mando DualSense.</p>
-            <p class="precio">$640.000 ARS</p>
-            
-            <!-- EL BOTÓN DE WHATSAPP -->
-            <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20PlayStation%20Portal%20Remote%20Player" target="_blank" class="boton-whatsapp">
-                Consultar por WhatsApp
-            </a>
+        <article class="producto card-3d">
+            <div class="img-container">
+                <img src="images/PlayStation Portal Remote Player.jpg" alt="PlayStation Portal Remote Player">
+            </div>
+            <div class="producto-info">
+                <h2>PlayStation Portal Remote Player</h2>
+                <p>Es un dispositivo portátil de uso a distancia exclusivo para la PS5. No es una consola independiente; requiere transmitir los juegos mediante Wi-Fi desde una consola PS5 que tengas en casa. Cuenta con una pantalla táctil LCD Full HD de 8 pulgadas y los agarres laterales replican de forma exacta todas las funciones del mando DualSense.</p>
+            </div>
+            <div class="producto-footer">
+                <p class="precio">$640.000 ARS</p>
+                <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20PlayStation%20Portal%20Remote%20Player" target="_blank" class="boton-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar
+                </a>
+            </div>
         </article>
 
         <!-- PRODUCTO 2 -->
-        <article class="producto">
-            <img src="images/Microsoft Xbox Series S.jpg" alt="Microsoft Xbox Series S">
-            <h2>Microsoft Xbox Series S (512 GB / 1 TB)</h2>
-            <p>Es una consola de sobremesa de nueva generación en un formato compacto y 100% digital (no tiene lectora de discos físicos). Está diseñada para ejecutar juegos a una resolución de hasta 1440p (con reescalado a 4K) y tasas de hasta 120 FPS. Cuenta con un almacenamiento SSD de alta velocidad que habilita funciones como Quick Resume para cambiar de juego al instante.</p>
-            <p class="precio">$1.500.000 ARS</p>
-            <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20Xbox%20Series%20S" target="_blank" class="boton-whatsapp">
-                Consultar por WhatsApp
-            </a>
+        <article class="producto card-3d">
+            <div class="img-container">
+                <img src="images/Microsoft Xbox Series S.jpg" alt="Microsoft Xbox Series S">
+            </div>
+            <div class="producto-info">
+                <h2>Microsoft Xbox Series S <br><span class="badge">512 GB / 1 TB</span></h2>
+                <p>Es una consola de sobremesa de nueva generación en un formato compacto y 100% digital. Está diseñada para ejecutar juegos a una resolución de hasta 1440p (con reescalado a 4K) y tasas de hasta 120 FPS. Cuenta con un almacenamiento SSD de alta velocidad que habilita funciones como Quick Resume.</p>
+            </div>
+            <div class="producto-footer">
+                <p class="precio">$1.500.000 ARS</p>
+                <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20Xbox%20Series%20S" target="_blank" class="boton-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar
+                </a>
+            </div>
         </article>
 
         <!-- PRODUCTO 3 -->
-        <article class="producto">
-            <img src="images/Nintendo Switch Modelo OLED.jpg" alt="Nintendo Switch Modelo OLED">
-            <h2>Nintendo Switch</h2>
-            <p>Consola híbrida que permite jugar tanto en modo portátil como conectada al televisor mediante su base (Dock). Destaca por su pantalla OLED de 7 pulgadas con colores vibrantes y contrastes definidos. Cuenta con 64 GB de almacenamiento interno, un soporte trasero ajustable y mandos Joy-Con desmontables con control por movimiento.</p>
-            <p class="precio">$950.000 ARS</p>
-            
-            <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20Nintendo%20Switch" target="_blank" class="boton-whatsapp">
-                Consultar por WhatsApp
-            </a>
+        <article class="producto card-3d">
+            <div class="img-container">
+                <img src="images/Nintendo Switch Modelo OLED.jpg" alt="Nintendo Switch Modelo OLED">
+            </div>
+            <div class="producto-info">
+                <h2>Nintendo Switch <br><span class="badge">Modelo OLED</span></h2>
+                <p>Consola híbrida que permite jugar tanto en modo portátil como conectada al televisor mediante su base (Dock). Destaca por su pantalla OLED de 7 pulgadas con colores vibrantes y contrastes definidos. Cuenta con 64 GB de almacenamiento interno, soporte ajustable y mandos Joy-Con desmontables.</p>
+            </div>
+            <div class="producto-footer">
+                <p class="precio">$950.000 ARS</p>
+                <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20Nintendo%20Switch" target="_blank" class="boton-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar
+                </a>
+            </div>
         </article>
 
         <!-- PRODUCTO 4 -->
-        <article class="producto">
-            <img src="images/Sony PlayStation 5 Slim Standard Edition.jpg" alt="Sony PlayStation 5 Slim Standard Edition">
-            <h2>Sony PlayStation 5 Slim Standard Edition</h2>
-            <p>Es el modelo rediseñado de la PS5, un 30% más pequeño y liviano. Cuenta con un lector de discos Blu-ray UHD extraíble y un almacenamiento SSD interno de 1 TB de velocidad ultraalta. Ofrece potencia gráfica de última generación con soporte para resolución 4K nativa y audio 3D inmersivo. Incluye el control inalámbrico DualSense con gatillos adaptativos.</p>
-            <p class="precio">$1.700.000 ARS</p>
-            
-            <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20PlayStation%205%20Slim" target="_blank" class="boton-whatsapp">
-                Consultar por WhatsApp
-            </a>
+        <article class="producto card-3d">
+            <div class="img-container">
+                <img src="images/Sony PlayStation 5 Slim Standard Edition.jpg" alt="Sony PlayStation 5 Slim Standard Edition">
+            </div>
+            <div class="producto-info">
+                <h2>Sony PlayStation 5 Slim <br><span class="badge">Standard Edition</span></h2>
+                <p>Es el modelo rediseñado de la PS5, un 30% más pequeño y liviano. Cuenta con un lector de discos Blu-ray UHD extraíble y un almacenamiento SSD interno de 1 TB. Ofrece potencia gráfica de última generación con soporte para resolución 4K nativa y audio 3D inmersivo. Incluye DualSense.</p>
+            </div>
+            <div class="producto-footer">
+                <p class="precio">$1.700.000 ARS</p>
+                <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20PlayStation%205%20Slim" target="_blank" class="boton-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar
+                </a>
+            </div>
         </article>
 
         <!-- PRODUCTO 5 -->
-        <article class="producto">
-            <img src="images/Microsoft Xbox 360.jpg" alt="Microsoft Xbox 360">
-            <h2>Microsoft Xbox 360</h2>
-            <p>Consola clásica de sobremesa lanzada originalmente en la séptima generación de videojuegos. El rediseño "Slim" destaca por su acabado negro brillante o mate, reducción de ruido, conectividad Wi-Fi integrada y un puerto dedicado para conectar el sensor de movimiento Kinect.</p>
-            <p class="precio">$150.000 ARS</p>
-            
-            <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20Xbox%20360" target="_blank" class="boton-whatsapp">
-                Consultar por WhatsApp
-            </a>
+        <article class="producto card-3d">
+            <div class="img-container">
+                <img src="images/Microsoft Xbox 360.jpg" alt="Microsoft Xbox 360">
+            </div>
+            <div class="producto-info">
+                <h2>Microsoft Xbox 360 <br><span class="badge">Retro / Clásica</span></h2>
+                <p>Consola clásica de sobremesa lanzada originalmente en la séptima generación de videojuegos. El rediseño "Slim" destaca por su acabado negro brillante o mate, reducción de ruido, conectividad Wi-Fi integrada y un puerto dedicado para conectar el sensor de movimiento Kinect.</p>
+            </div>
+            <div class="producto-footer">
+                <p class="precio">$150.000 ARS</p>
+                <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20Xbox%20360" target="_blank" class="boton-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar
+                </a>
+            </div>
         </article>
 
         <!-- PRODUCTO 6 -->
-        <article class="producto">
-            <img src="images/Sony PlayStation 4 Slim.jpg" alt="Sony PlayStation 4 Slim">
-            <h2>Sony PlayStation 4 Slim</h2>
-            <p>Consola de octava generación que ofrece una amplia y galardonada biblioteca de juegos en resolución 1080p. Su variante Slim es mucho más eficiente energéticamente y silenciosa que el modelo original de lanzamiento. Incluye el clásico mando inalámbrico DualShock 4 con panel táctil integrado.</p>
-            <p class="precio">$450.000 ARS</p>
-            
-            <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20PlayStation%204%20Slim" target="_blank" class="boton-whatsapp">
-                Consultar por WhatsApp
-            </a>
+        <article class="producto card-3d">
+            <div class="img-container">
+                <img src="images/Sony PlayStation 4 Slim.jpg" alt="Sony PlayStation 4 Slim">
+            </div>
+            <div class="producto-info">
+                <h2>Sony PlayStation 4 Slim</h2>
+                <p>Consola de octava generación que ofrece una amplia y galardonada biblioteca de juegos en resolución 1080p. Su variante Slim es mucho más eficiente energéticamente y silenciosa que el modelo original de lanzamiento. Incluye el clásico mando inalámbrico DualShock 4 con panel táctil.</p>
+            </div>
+            <div class="producto-footer">
+                <p class="precio">$450.000 ARS</p>
+                <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20PlayStation%204%20Slim" target="_blank" class="boton-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar
+                </a>
+            </div>
         </article>
 
     </main>

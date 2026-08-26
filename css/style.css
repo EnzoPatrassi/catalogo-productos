@@ -1,122 +1,193 @@
-/* --- ESTILOS GENERALES --- */
+/* --- RESET Y VARIABLES GENERALES --- */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --bg-color: #f4f7f6;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --card-bg: #ffffff;
+    --accent-color: #00b894;
+    --whatsapp-grad: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    --shadow-soft: 0 15px 35px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f0f2f5; /* Un gris muy claro para contrastar con las tarjetas */
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
     line-height: 1.6;
 }
 
-/* --- ENCABEZADO Y PIE DE PÁGINA --- */
-header {
-    background-color: #1a1a1a;
+/* --- ENCABEZADO MODERNO --- */
+.hero-header {
+    background: linear-gradient(135deg, #1e272e 0%, #2f3640 100%);
     color: #ffffff;
     text-align: center;
-    padding: 2.5rem 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
-}
-
-header p {
-    font-size: 1.1rem;
-    color: #cccccc;
-}
-
-footer {
-    background-color: #1a1a1a;
-    color: #888;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 3rem;
-    font-size: 0.9rem;
-}
-
-/* --- CONTENEDOR PRINCIPAL (GRILLA) --- */
-.contenedor-productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem; /* Espacio entre cada tarjeta */
-    padding: 3rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto; /* Centra el contenedor en la pantalla */
-}
-
-/* --- TARJETAS DE PRODUCTOS --- */
-.producto {
-    background-color: #ffffff;
-    width: 100%;
-    max-width: 320px; /* Ancho máximo de la tarjeta */
-    border-radius: 12px;
+    padding: 4rem 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: var(--bg-color);
+    transform: skewY(-2deg);
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.header-content p {
+    font-size: 1.1rem;
+    color: #dcdde1;
+    font-weight: 300;
+}
+
+/* --- CONTENEDOR PRINCIPAL (GRID PERFECTO) --- */
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 4rem 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* --- TARJETAS PREMIUM --- */
+.producto {
+    background-color: var(--card-bg);
+    border-radius: 24px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0,0,0,0.03);
 }
 
-/* Efecto al pasar el mouse por encima */
-.producto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+.card-3d:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Imagen del producto */
+.img-container {
+    padding: 2rem;
+    background: #fdfdfd;
+    border-bottom: 1px solid #f1f2f6;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .producto img {
     width: 100%;
-    height: 220px;
-    object-fit: contain; /* Asegura que la consola entera se vea sin recortarse */
-    background-color: #fff;
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.08); /* Zoom sutil en la imagen al hacer hover */
+}
+
+/* Textos de la tarjeta */
+.producto-info {
+    padding: 1.5rem 1.5rem 0;
+    flex-grow: 1;
 }
 
 .producto h2 {
-    font-size: 1.3rem;
-    padding: 1rem 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
     color: #111;
-    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f4fd;
+    color: #0984e3;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-top: 5px;
+    font-weight: 600;
 }
 
 .producto p {
-    padding: 0.5rem 1.5rem;
     font-size: 0.9rem;
-    color: #666;
-    flex-grow: 1; /* Empuja el precio y el botón hacia abajo si el texto es corto */
-    text-align: justify;
+    color: var(--text-muted);
+    text-align: left;
 }
 
-/* --- PRECIO Y BOTÓN --- */
+/* Precio y Botón (Fijados siempre abajo) */
+.producto-footer {
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
 .precio {
-    font-size: 1.4rem !important;
-    font-weight: 700;
-    color: #2b8a3e; /* Verde oscuro para destacar el precio */
-    text-align: center !important;
-    padding: 0.5rem 1rem 1rem !important;
-    margin: 0;
+    font-size: 1.6rem !important;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 1rem;
 }
 
 .boton-whatsapp {
-    display: block;
-    background-color: #25D366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--whatsapp-grad);
     color: #ffffff;
     text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    padding: 1rem;
-    transition: background-color 0.3s ease;
-    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 50px; /* Botón estilo píldora */
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(37, 211, 102, 0.2);
 }
 
 .boton-whatsapp:hover {
-    background-color: #128C7E; /* Verde más oscuro de WhatsApp al pasar el mouse */
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    background-color: var(--text-main);
+    color: #b2bec3;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Ajustes para celulares chicos */
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+        padding: 2rem 5%;
+    }
 }
