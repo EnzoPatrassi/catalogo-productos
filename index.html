@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    
+    <!-- Fuentes de Google (Poppins) para un diseño moderno -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Iconos de FontAwesome para el botón de WhatsApp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="hero-header">
+        <div class="header-content">
+            <h1>Patrassi Store</h1>
+            <p>Catálogo online oficial. Envíame un mensaje para comprar.</p>
+        </div>
+    </header>
+
+    <main class="contenedor-productos">
+
+        <!-- ================= CATEGORÍA: ALMACÉN ================= -->
+        <!-- Producto 1 -->
+        <article class="producto card-3d" data-categoria="almacen">
+            <div class="img-container">
+                <img src="images/Chocolate Con Maní Neugebauer.jpg" alt="Aceite de Girasol">
+            </div>
+            <div class="producto-info">
+                <h2>Chocolate Con Maní Neugebauer</h2>
+            </div>
+            <div class="producto-footer">
+                <p class="precio">$3.000 ARS</p>
+                <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20el%20Chocolate%20Con%20Maní%20Neugebauer" target="_blank" class="boton-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar
+                </a>
+            </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="producto card-3d" data-categoria="almacen">
+            <div class="img-container">
+                <img src="images/Croissant.jpg" alt="Arroz Blanco">
+            </div>
+            <div class="producto-info">
+                <h2>Croissant</h2>
+            </div>
+            <div class="producto-footer">
+                <p class="precio">$2.500 ARS</p>
+                <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20el%20Croissant" target="_blank" class="boton-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar
+                </a>
+            </div>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="producto card-3d" data-categoria="almacen">
+            <div class="img-container">
+                <img src="images/Gomitas Picantes Uva Y Sandia Mogul.jpg" alt="Café Molido">
+            </div>
+            <div class="producto-info">
+                <h2>Gomitas Picantes Uva Y Sandia Mogul</h2>
+            </div>
+            <div class="producto-footer">
+                <p class="precio">$800 ARS</p>
+                <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20el%20Gomitas%20Picantes%20Uva%20Y%20Sandia%20Mogul" target="_blank" class="boton-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar
+                </a>
+            </div>
+        </article>
+
+        <!-- ================= CATEGORÍA: TECNOLOGÍA ================= -->
+        <!-- Producto 4 -->
+        <article class="producto card-3d" data-categoria="almacen">
+            <div class="img-container">
+                <img src="images/Medialuna De Manteca.jpg" alt="Auriculares In-Ear T&ME AU-11022">
+            </div>
+            <div class="producto-info">
+                <h2>Medialuna De Manteca</h2>
+            </div>
+            <div class="producto-footer">
+                <p class="precio">$1000 ARS</p>
+                <a href="https://wa.me/5492612795677?text=Hola,%20me%20interesa%20la%20Medialuna%20De%20Manteca" target="_blank" class="boton-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar
+                </a>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- AGREGA EL SCRIPT AQUÍ -->
+    <script>
+        // Guardamos los botones y los productos en variables
+        const botones = document.querySelectorAll('.btn-categoria');
+        const productos = document.querySelectorAll('.producto');
+
+        // A cada botón le agregamos un "escuchador de clics"
+        botones.forEach(boton => {
+            boton.addEventListener('click', () => {
+                
+                // 1. Quitar el color activo al botón anterior y ponérselo al nuevo
+                botones.forEach(b => b.classList.remove('activo'));
+                boton.classList.add('activo');
+
+                // 2. Saber qué categoría se eligió
+                const filtro = boton.dataset.filtro;
+
+                // 3. Revisar cada producto y ocultarlo si no coincide
+                productos.forEach(producto => {
+                    if (filtro === 'todos' || producto.dataset.categoria === filtro) {
+                        producto.classList.remove('oculto'); // Lo muestra
+                    } else {
+                        producto.classList.add('oculto'); // Lo oculta
+                    }
+                });
+            });
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 Patrassi Store. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
